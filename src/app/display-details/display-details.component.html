@@ -1,0 +1,5 @@
+<button class="btn btn-primary" (click)="onSwitch()">Display Details</button>
+<button class="btn btn-warning" (click)="onPlusMore()">Add paragraph</button>
+<div *ngIf="contentStatus">
+    <p *ngFor="let contentDetail of contentDetails; let i = index" [ngStyle]="{backgroundColor: i >= 4? 'blue' : 'none'}" [ngClass]="{headingCust: i >=4}">{{contentDetail}}</p>
+</div>
