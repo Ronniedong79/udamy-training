@@ -30,6 +30,10 @@ import { TestingComponentComponent } from './testing-component/testing-component
     ShoppingListComponent,
     ShoppingEditComponent,
     TestingComponentComponent
+
+
+
+    
   ],
   imports: [
     BrowserModule,
