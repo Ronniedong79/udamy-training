@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Recipe } from '../recipe.model';
 
@@ -10,18 +10,29 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe(
-      'A test recipe',
-      'this is a testing',
+      'Test recipe A',
+      'this is a testing A',
       'https://media.danmurphys.com.au/dmo/product/140048-1.png?impolicy=PROD_SM'
     ),
     new Recipe(
-      'A test recipe',
-      'this is a testing',
+      'Test recipe B',
+      'this is a testing B',
       'https://media.danmurphys.com.au/dmo/product/140048-1.png?impolicy=PROD_SM'
     ),
   ];
+  
+  @Output('passRecipeInfoList') recipeInfoList = new EventEmitter<Recipe> (); 
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  getRecipeInfo(recipe: Recipe) {
+    this.recipeInfoList.emit (recipe);
+    // console.log (recipeName);
+  }
+
+  // getRecipeDesc(recipeDesc: string) {
+  //   this.recipeInfoList.emit (recipeDesc);
+  // }
 }
