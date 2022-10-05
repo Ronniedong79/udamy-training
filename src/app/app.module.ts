@@ -30,7 +30,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
