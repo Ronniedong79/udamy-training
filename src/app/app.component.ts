@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
-
-  triger: string = "recipe";
-
-  catchMenuController(triger: string) {
-    this.triger = triger;
-  }
-
 }
